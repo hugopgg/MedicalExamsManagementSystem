@@ -1,4 +1,4 @@
-# MedicalExamsManagementSystem
+i# MedicalExamsManagementSystem
 
 - ##### Author:
 
@@ -13,6 +13,12 @@ This project is a basic system designed for managing medical exams within a heal
 - Maven
 
 ## Usage
+
+Compile:
+
+```
+make
+```
 
 Start the application:
 
