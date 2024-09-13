@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="494.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inf5153.controllers.PrescriptionController" stylesheets="@styles.css">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Text layoutX="227.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make a prescription">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Label layoutX="264.0" layoutY="98.0" text="Select a patient : ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="patientComboBox" layoutX="209.0" layoutY="127.0" onAction="#handlePatientSelection" prefHeight="26.0" prefWidth="222.0" />
+            <ComboBox fx:id="examTypeComboBox" layoutX="245.0" layoutY="200.0" onAction="#handleExamTypeSelection" prefWidth="150.0" visible="false" />
+            <Label fx:id="selectExamLabel" layoutX="224.0" layoutY="172.0" text="Select an Exam to prescribe : " visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <StackPane layoutX="220.0" layoutY="240.0" prefHeight="53.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="compositeExamTypeComboBox" onAction="#handleCompositeExamTypeSelection" prefWidth="150.0" visible="false" />
+                  <ComboBox fx:id="elementaryExamTypeComboBox" onAction="#handleElementaryExamTypeSelection" prefWidth="150.0" visible="false" />
+               </children>
+            </StackPane>
+           
+            <Button layoutX="251.0" layoutY="402.0" mnemonicParsing="false" onAction="#handleSubmitPrescription" text="Submit prescription" />
+            <Label fx:id="errorLabel" layoutX="245.0" layoutY="373.0" text="All fields must be selected" textFill="#ee2525" visible="false" />
+            <HBox fx:id="parametersHBox" alignment="CENTER" layoutX="107.0" layoutY="293.0" prefHeight="100.0" prefWidth="427.0" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

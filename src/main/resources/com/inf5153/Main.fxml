@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="550.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inf5153.controllers.MainController">
+  <children>
+    <MenuBar prefHeight="0.0" prefWidth="625.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="412.0" prefWidth="693.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Text layoutX="291.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UQAM's Health Care Center">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Label layoutX="343.0" layoutY="87.0" text="Select a Medical Service :" />
+            <ComboBox fx:id="serviceComboBox" layoutX="311.0" layoutY="115.0" onAction="#handleServiceSelection" prefHeight="26.0" prefWidth="197.0" />
+            <Label fx:id="selectDoctorLabel" layoutX="359.0" layoutY="159.0" text="Select a Doctor :" visible="false" />
+            <ComboBox fx:id="doctorComboBox" layoutX="311.0" layoutY="188.0" onAction="#handleDoctorSelection" prefHeight="26.0" prefWidth="197.0" visible="false" />
+            <Button fx:id="prescriptionButton" layoutX="339.0" layoutY="255.0" mnemonicParsing="false" onAction="#handlePrescription" text="Make a prescription" visible="false" />
+            <VBox fx:id="serviceDetailsVBox" layoutX="33.0" layoutY="68.0" prefHeight="120.0" prefWidth="223.0" visible="false">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Medical Service Infos">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="serviceNameLabel" alignment="CENTER" text="Label" />
+                  <Label fx:id="servicePhoneLabel" alignment="CENTER" text="Label" />
+                  <Label fx:id="serviceEmailLabel" text="Label" />
+                  <Label fx:id="serviceDoctorsLabel" text="Label" />
+               </children>
+            </VBox>
+            <ListView fx:id="requestListView" layoutX="589.0" layoutY="68.0" prefHeight="200.0" prefWidth="200.0" />
+            <ListView fx:id="responseListView" layoutX="589.0" layoutY="301.0" prefHeight="200.0" prefWidth="200.0" />
+            <Text layoutX="623.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appoitment Responses" />
+            <Text layoutX="644.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient's Results" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
